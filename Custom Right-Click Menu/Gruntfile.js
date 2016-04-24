@@ -2,9 +2,9 @@
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		copy: {
-			build: {
+			moveWebsite: {
 				files: [
-					{ expand: true, cwd: 'Custom Right-Click Menu/app/build/website/', src: ['./**'], dest: './' }
+					{ expand: true, cwd: 'build/website/', src: ['./**'], dest: '../' }
 				]
 			}
 		}

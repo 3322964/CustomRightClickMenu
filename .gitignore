@@ -202,6 +202,8 @@ ModelManifest.xml
 /Custom Right-Click Menu/app/bower_components_test_test
 /Custom Right-Click Menu/app/bower_components_uncrisp
 /Custom Right-Click Menu/*.*
+!/Custom Right-Click Menu/Gruntfile.js
+!/Custom Right-Click Menu/gruntfile.js
 *.DotSettings
 /Custom Right-Click Menu.VC.db
 /Custom Right-Click Menu.VC.VC.opendb
