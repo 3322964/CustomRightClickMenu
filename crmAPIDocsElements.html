@@ -22,7 +22,7 @@ The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
---><meta charset="UTF-8"></head><body><div hidden="" by-vulcanize=""><script src="/bower_components/polymer/polymer-micro.js">(function() {
+--><meta charset="UTF-8"></head><body><div hidden="" by-vulcanize=""><script>(function() {
 function resolve() {
 document.body.removeAttribute("unresolved");
 }
@@ -556,7 +556,7 @@ Polymer.Base._addFeature({
 		this._setupDebouncers();
 		this._marshalBehaviors();
 	}
-});</script><script src="/bower_components/polymer/polymer-mini.js">Polymer.Base._addFeature({
+});</script><script>Polymer.Base._addFeature({
 _prepTemplate: function() {
 this._template = this._template || Polymer.DomModule.import(this.is, "template");
 if (!this._template) {
@@ -922,7 +922,7 @@ return data;
 return escapeData(data);
 
 case Node.COMMENT_NODE:
-return "<!--" + node.data + "-->";
+return "\x3c!--" + node.data + "--\x3e";
 
 default:
 console.error(node);
@@ -1867,7 +1867,7 @@ this._marshalBehaviors();
 this._tryReady();
 },
 _marshalBehavior: function(b) {}
-});</script><script src="/bower_components/polymer/polymer.js">Polymer.nar = [];
+});</script><script>Polymer.nar = [];
 
 Polymer.Annotations = {
 parseAnnotations: function(template) {
@@ -7304,7 +7304,7 @@ this._removeChildren();
 
 </dom-module>
 
-<script src="/bower_components/paper-toolbar/paper-toolbar.js">
+<script>
 
   (function() {
 
@@ -7445,7 +7445,7 @@ this._removeChildren();
 
 </script>
 
-<script src="/bower_components/iron-meta/iron-meta.js">
+<script>
 
   (function() {
 
@@ -7775,7 +7775,7 @@ this._removeChildren();
 
   </dom-module>
 
-<script src="/bower_components/iron-icon/iron-icon.js">
+<script>
 
     Polymer({
 
@@ -7853,7 +7853,7 @@ this._removeChildren();
 
     });
 
-  </script><script src="/bower_components/iron-iconset-svg/iron-iconset-svg.js">
+  </script><script>
   /**
    * The `iron-iconset-svg` element allows users to define their own icon sets
    * that contain svg icons. The svg icon elements should be children of the
@@ -8366,7 +8366,7 @@ this._removeChildren();
 <g id="traffic"><path d="M20 10h-3V8.86c1.72-.45 3-2 3-3.86h-3V4c0-.55-.45-1-1-1H8c-.55 0-1 .45-1 1v1H4c0 1.86 1.28 3.41 3 3.86V10H4c0 1.86 1.28 3.41 3 3.86V15H4c0 1.86 1.28 3.41 3 3.86V20c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-1.14c1.72-.45 3-2 3-3.86h-3v-1.14c1.72-.45 3-2 3-3.86zm-8 9c-1.11 0-2-.9-2-2s.89-2 2-2c1.1 0 2 .9 2 2s-.89 2-2 2zm0-5c-1.11 0-2-.9-2-2s.89-2 2-2c1.1 0 2 .9 2 2s-.89 2-2 2zm0-5c-1.11 0-2-.9-2-2 0-1.11.89-2 2-2 1.1 0 2 .89 2 2 0 1.1-.89 2-2 2z"></path></g>
 </defs></svg>
 </iron-iconset-svg>
-<script src="/bower_components/iron-a11y-keys-behavior/iron-a11y-keys-behavior.js">
+<script>
   (function() {
     'use strict';
 
@@ -8771,7 +8771,7 @@ this._removeChildren();
       }
     };
   })();
-</script><script src="/bower_components/iron-behaviors/iron-control-state.js">Polymer.IronControlState = {
+</script><script>Polymer.IronControlState = {
 	properties: {
 		/**
 		 * If true, the element currently has focus.
@@ -8834,7 +8834,7 @@ this._removeChildren();
 			this._controlStateChanged(focused, disabled);
 		}
 	}
-};</script><script src="/bower_components/iron-behaviors/iron-control-state.js">Polymer.IronControlState = {
+};</script><script>Polymer.IronControlState = {
 	properties: {
 		/**
 		 * If true, the element currently has focus.
@@ -8897,7 +8897,7 @@ this._removeChildren();
 			this._controlStateChanged(focused, disabled);
 		}
 	}
-};</script><script src="/bower_components/iron-behaviors/iron-button-state.js">
+};</script><script>
 
   /** @polymerBehavior Polymer.IronButtonState */
   Polymer.IronButtonStateImpl = {
@@ -9077,7 +9077,7 @@ this._removeChildren();
     Polymer.IronButtonStateImpl
   ];
 
-</script><script src="/bower_components/paper-behaviors/paper-button-behavior.js">
+</script><script>
   /** @polymerBehavior */
   Polymer.PaperButtonBehaviorImpl = {
 
@@ -9117,7 +9117,7 @@ this._removeChildren();
     Polymer.PaperButtonBehaviorImpl
   ];
 
-</script><script src="/bower_components/paper-behaviors/paper-radio-button-behavior.js">
+</script><script>
 
   /** @polymerBehavior */
   Polymer.PaperRadioButtonInk = {
@@ -9216,7 +9216,7 @@ this._removeChildren();
 		<div id="waves"></div>
 	</template>
 </dom-module>
-<script src="/bower_components/paper-ripple/paper-ripple.js">(function () {
+<script>(function () {
 	var Utility = {
 		cssColorWithAlpha: function (cssColor, alpha) {
 			var parts = cssColor.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
@@ -9823,7 +9823,7 @@ this._removeChildren();
     <iron-icon id="icon" src="[[src]]" icon="[[icon]]"></iron-icon>
   </template>
 </dom-module>
-<script src="/bower_components/paper-icon-button/paper-icon-button.js">
+<script>
   Polymer({
     is: 'paper-icon-button',
 
@@ -9885,7 +9885,7 @@ this._removeChildren();
     <content></content>
   </template>
 </dom-module>
-<script src="/bower_components/paper-material/paper-material.js">
+<script>
   Polymer({
     is: 'paper-material',
 
